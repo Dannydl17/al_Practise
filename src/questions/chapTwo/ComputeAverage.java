@@ -1,4 +1,4 @@
-package questions;
+package questions.chapTwo;
 
 import java.util.Scanner;
 

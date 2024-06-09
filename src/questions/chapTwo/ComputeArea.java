@@ -1,4 +1,4 @@
-package questions;
+package questions.chapTwo;
 
 public class ComputeArea {
     public static void main(String[] args) {

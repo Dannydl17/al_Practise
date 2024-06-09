@@ -1,4 +1,4 @@
-package questions;
+package questions.chapTwo;
 
 public class TestOne {
     public static void main(String[] args) {
