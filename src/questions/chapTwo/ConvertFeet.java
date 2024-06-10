@@ -10,5 +10,8 @@ public class ConvertFeet {
 
         System.out.println("Enter a value for feet:  ");
         double numberInFeet = keyboardInput.nextDouble();
+
+        double totalCalculation = numberInFeet * 0.305;
+        System.out.println(numberInFeet + " feet is " + totalCalculation + " meter ");
     }
 }
