@@ -9,11 +9,13 @@ public class ComputeVolume {
         Scanner keyboardInput = new Scanner(in);
 
         System.out.println("Enter the radius and length of a cylinder:   ");
-        double numberCollected = keyboardInput.nextDouble();
+        double numberOfRadius = keyboardInput.nextDouble();
+        int numberOfLength = keyboardInput.nextInt();
 
-        double nums = numberCollected / 10000;
-        int numOne = (int) (numberCollected % 100);
-        System.out.println(nums);
-        System.out.println(numOne);
+        double area = numberOfRadius * numberOfRadius * 3.14159;
+        double volume = area * numberOfLength;
+
+        System.out.println("The area is:  " + String.format("%.4f", area));
+        System.out.println("The volume is: " + String.format("%.1f", volume));
     }
 }
