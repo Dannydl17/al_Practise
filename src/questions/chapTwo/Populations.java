@@ -8,9 +8,6 @@ public class Populations {
     public static void main(String[] args) {
         Scanner keyboardInput = new Scanner(in);
 
-        System.out.println("Enter the number of years:    ");
-        int numberOfYear = keyboardInput.nextInt();
-
         int secondsNumber = 60 * 60;
 
         int numberOfHours = secondsNumber * 24;
@@ -19,8 +16,23 @@ public class Populations {
         int totalNumberAdded = numberOfHours * 365;
 
 
-        int babyBirth = totalNumberAdded / 7;
-        int deathBaby = totalNumberAdded / 13;
-        int immigrantBaby = totalNumberAdded / 45;
+        double babyBirth = 1.0 / 7;
+        double deathBaby = 1.0 / 13;
+        double immigrantBaby = 1.0 / 45;
+
+        long numberOfPeople =  312032486;
+
+        long births = (long) (totalNumberAdded * babyBirth);
+        long deaths = (long) (totalNumberAdded * deathBaby);
+        long immigrants = (long) (totalNumberAdded * immigrantBaby);
+
+        System.out.println("Enter the number of years:  ");
+        int numberOfYears = keyboardInput.nextInt();
+
+        long oneYearPeople = births - deaths + immigrants;
+        long totalOneYear = oneYearPeople * numberOfYears;
+        long total = numberOfPeople + totalOneYear;
+
+        System.out.println("The population in "+ numberOfYears + " years is " + total);
     }
 }
