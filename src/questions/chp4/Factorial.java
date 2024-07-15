@@ -7,8 +7,6 @@ public class Factorial {
             factorial = factorial * (number - count);
 
         }
-
-        System.out.println(factorial);
-        return factorial;
+       return factorial;
     }
 }

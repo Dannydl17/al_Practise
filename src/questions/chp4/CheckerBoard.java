@@ -9,7 +9,7 @@ public class CheckerBoard {
                     System.out.print("*");
                 }
                 for (int innerCount = 0; innerCount < 1; innerCount++) {
-                    System.out.print(" ");
+                     System.out.print(" ");
                 }
             }
             System.out.println();
