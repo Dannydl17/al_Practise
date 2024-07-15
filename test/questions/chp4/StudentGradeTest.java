@@ -1,6 +1,4 @@
-package question.chp4;
-
-import questions.chp4.StudentGrade;
+package questions.chp4;
 
 public class StudentGradeTest {
     public static void main(String[] args) {

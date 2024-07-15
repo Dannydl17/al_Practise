@@ -1,7 +1,6 @@
-package question.chp4;
+package questions.chp4;
 
 import org.junit.jupiter.api.Test;
-import questions.chp4.CheckerBoard;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
