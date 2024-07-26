@@ -11,11 +11,10 @@ public class PalindromeNumber {
         System.out.println("Enter a palindrome number:  ");
         int number = keyboardInput.nextInt();
 
-            if (number != 5) {
+            while (number != 5) {
                 System.out.println("Incomplete number");
                 System.out.println("Enter a palindrome number:  ");
                 number = keyboardInput.nextInt();
-
             }
 
               int reverseNumber = 0;
