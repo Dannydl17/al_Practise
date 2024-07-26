@@ -9,7 +9,7 @@ public class PrintTriangle {
     }
 
     private static void print(int count) {
-        for (int innerCount = 1; innerCount <= count +1; innerCount++) {
+        for (int innerCount = 1; innerCount <= count; innerCount++) {
             System.out.print(innerCount + " ");
         }
         System.out.println();
