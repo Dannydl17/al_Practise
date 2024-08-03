@@ -11,17 +11,7 @@ public class GuessNumber {
        Scanner keyboardInput = new Scanner(in);
        System.out.print("Guess a magic number between 0 to 100");
 
-        System.out.print("\n Enter your guess number:  ");
-        int guessNumber = keyboardInput.nextInt();
-
-        if (guessNumber == number) {
-            System.out.println("Yes, the number is " + number);
-        } else if (guessNumber > number) {
-            System.out.println("Your guess number is  high");
-        }
-        else
-            System.out.println("Your guess number is low");
-
+        int guessNumber = -1;
         while (guessNumber != number){
             System.out.print("\n Enter your guess number:  ");
             guessNumber = keyboardInput.nextInt();
