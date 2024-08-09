@@ -30,14 +30,15 @@ public class SubtractionQuiz {
                 System.out.println("You are correct! ");
                 correctCount++;
             }
-            else {
-                System.out.println("Your answer is wrong.\n" + number1
-                        + " - " + number2 + " should be " + (number1 - number2));
-                count++;
 
-                output += "\n" + number1 + "-" + number2 + "=" + answer +
-                        ((number1 - number2 == answer) ? " correct" : " wrong");
-            }
+            else
+                 System.out.println("Your answer is wrong.\n" + number1
+                     + " - " + number2 + " should be " + (number1 - number2));
+
+            count++;
+            output += "\n" + number1 + "-" + number2 + "=" + answer +
+                ((number1 - number2 == answer) ? " correct" : " wrong");
+
         }
 
         long endTime = System.currentTimeMillis();

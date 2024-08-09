@@ -23,9 +23,9 @@ public class Test {
 //        System.out.println("number " + number);
 
         int x = 80000000;
-        while (x > 0) {
+        while (x > 0)
             x++;
-        }
+
         System.out.println("x is " + x);
     }
 }
