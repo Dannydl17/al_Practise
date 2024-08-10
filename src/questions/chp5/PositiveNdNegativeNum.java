@@ -10,6 +10,7 @@ public class PositiveNdNegativeNum {
 
         int positiveNum = 0;
         int negativeNum = 0;
+        int count = 0;
 
 
         double total = 0.0;
@@ -27,8 +28,7 @@ public class PositiveNdNegativeNum {
         }
 
         total += num;
-
-
+        count++;
         while (num != 0){
             System.out.println("Enter an integer, the input ends if it is 0: ");
             num = keyboardInput.nextInt();
@@ -41,9 +41,14 @@ public class PositiveNdNegativeNum {
               negativeNum = negativeNum + 1;
             }
             total += num;
+            if (num != 0) {
+                count++;
+            }
         }
+        average = total / count;
         System.out.println("Positive number is: " + positiveNum);
         System.out.println("Negative number is: " + negativeNum);
         System.out.println("The total is: " +total);
+        System.out.println("The average is: " + average);
     }
 }
