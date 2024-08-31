@@ -20,13 +20,23 @@ public class SubtractionQuizLoop {
             int number4 = (int)(Math.random() * 10);
             int number5 = (int)(Math.random() * 10);
 
-            if(number1 < number2 && number2 < number3 && number3 < number4 && number4 < number5){
+            if (number1 < number2) {
                 int temp = number1;
                 number1 = number2;
-                number2 = number3;
-                number4 = number5;
-                number5 = temp;
+                number2 = temp;
             }
+            if (number2 < number3) {
+                int temp = number2;
+                number2 = number3;
+                number3 = temp;
+            }
+            if (number3 < number4 || number3 > number4) {
+                int temp = number3;
+                number3 = number4;
+                number4 = temp;
+            }
+
+
 
             System.out.print(
                     "What is " + number1 + " - " + number2 + " - " + number3 + " - " + number4 + " - " + number5 + "? ");
