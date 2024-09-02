@@ -18,29 +18,32 @@ public class TwoHighestScore {
         int studentScore = keyboardInput.nextInt();
 
         String firstName = studentName;
-//        String secondName = studentName;
+        String secondName = null;
         int highestNumber = studentScore;
         int secondHighestNumber = 0;
         for (int count = 1; count < numberOfStudents; count++) {
             System.out.print("Enter student's name: ");
             studentName = keyboardInput.next();
 
+//            secondName = studentName;
+
             System.out.print("Enter student's score: ");
             studentScore = keyboardInput.nextInt();
 
+
             if (studentScore > highestNumber) {
+                secondName = firstName;
                 firstName = studentName;
                 secondHighestNumber = highestNumber;
-//                secondName = firstName;
                 highestNumber = studentScore;
             }
             else if (studentScore > secondHighestNumber) {
-//                secondName = studentName;
+                secondName = firstName;
                 secondHighestNumber = studentScore;
             }
         }
         System.out.println("Name of the students: " + firstName + " highestScore: "+ highestNumber);
-//        System.out.println("Name of the students: " + secondName + " second highestScore: "+ secondHighestNumber);
+        System.out.println("Name of the students: " + secondName + " second highestScore: "+ secondHighestNumber);
 
     }
 }
