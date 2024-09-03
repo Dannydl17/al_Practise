@@ -5,9 +5,9 @@ public class DivisibleNumber1 {
           int number = 100;
           int count = 0;
 
-          while (number != 200){
+          while (number <= 200){
               if (number % 5 == 0 || number % 6 == 0) {
-                  System.out.print(number);
+                  System.out.printf("%1d ", number);
                   count++;
               }
               if (count == 10) {
