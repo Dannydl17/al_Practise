@@ -38,12 +38,11 @@ public class TwoHighestScore {
                 highestNumber = studentScore;
             }
             else if (studentScore > secondHighestNumber) {
-                secondName = firstName;
                 secondHighestNumber = studentScore;
             }
         }
-        System.out.println("Name of the students: " + firstName + " highestScore: "+ highestNumber);
-        System.out.println("Name of the students: " + secondName + " second highestScore: "+ secondHighestNumber);
+        System.out.println("The first student name: " + firstName + " highestScore: "+ highestNumber);
+        System.out.println("The second student name: " + secondName + " second highestScore: "+ secondHighestNumber);
 
     }
 }

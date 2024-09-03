@@ -33,6 +33,6 @@ public class HighestScore {
 
             }
         }
-        System.out.println("Name of the students: " + names + " highestScore: "+ highestNumber);
+        System.out.println("The name of the student: " + names + " highestScore: "+ highestNumber);
     }
 }
