@@ -34,7 +34,6 @@ public class FinancialAppOne {
             double totalPayment = monthlyPayment * numberOfYears * 12;
             System.out.printf("%.3f%s              %.2f            %.2f%n",nums, '%', monthlyPayment, totalPayment);
             nums += (double) 1 / 8;
-
         }
     }
 }
