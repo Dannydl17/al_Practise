@@ -47,7 +47,7 @@ public class DisplayMonth {
 
 
             words = months[count];
-            word = daysOfTheW[noFirstDay];
+            word = daysOfTheW[saveNumber];
             System.out.printf("%s  %s %s  %s%n", words, numberOfYear, " is ", word);
             numb++;
             count++;
@@ -55,14 +55,15 @@ public class DisplayMonth {
             while (numb >= 1 && numb < 12) {
                 words = months[count];
                 counter = numberOfOrdinaryYear[countN];
-                num = saveNumber + counter;
-                int n =  num % 7;
-                if (n < 4) {
-                     numOne = 3 + n;
-                }else {
-                    numOne = n;
-                }
-                word = daysOfTheW[numOne];
+                saveNumber = (saveNumber + counter) % 7;
+//                num = saveNumber + counter;
+//                int n =  num % 7;
+//                if (n < 4) {
+//                     numOne = 3 + n;
+//                }else {
+//                    numOne = n;
+//                }
+                word = daysOfTheW[saveNumber];
 
                 System.out.printf("%s  %s %s  %s%n", words, numberOfYear, " is ", word);
                 numb++;
