@@ -13,17 +13,11 @@ public class DisplayMonth {
         int countN = 0;
         int saveNumber = 0;
         int leapYear = 366;
-        int numberOfM = 12;
         int num = 0;
-        int numb = 0;
-        int number = 1;
-        int numOne = 0;
         int count = 0;
         int counter = 0;
-        int counterNO = 0;
-        int counterNL = 0;
+        int counterN = 0;
         String word = "";
-        String wordD = "";
         String words = "";
 
         String[] months = {"January 1,", "February 1,", "March 1,", "April 1,", "May 1,",
@@ -43,31 +37,44 @@ public class DisplayMonth {
         int nums = checkNumber(numberOfYear);
 
         saveNumber = noFirstDay;
+
         if (nums == ordinaryYear) {
-
-
             words = months[count];
             word = daysOfTheW[saveNumber];
             System.out.printf("%s  %s %s  %s%n", words, numberOfYear, " is ", word);
-            numb++;
             count++;
 
-            while (numb >= 1 && numb < 12) {
+
+                while (count >= 1 && count < 11) {
+                    if (count == 9){
+                        System.out.println(" ...");
+                    }
+                    counter = numberOfOrdinaryYear[countN];
+                    saveNumber = (saveNumber + counter) % 7;
+                    count++;
+                    countN++;
+                }
                 words = months[count];
-                counter = numberOfOrdinaryYear[countN];
-                saveNumber = (saveNumber + counter) % 7;
-//                num = saveNumber + counter;
-//                int n =  num % 7;
-//                if (n < 4) {
-//                     numOne = 3 + n;
-//                }else {
-//                    numOne = n;
-//                }
+                counterN = numberOfOrdinaryYear[countN];
+                saveNumber = (saveNumber + counterN) % 7;
                 word = daysOfTheW[saveNumber];
 
                 System.out.printf("%s  %s %s  %s%n", words, numberOfYear, " is ", word);
-                numb++;
-                number++;
+        }
+
+        if (nums == leapYear) {
+            words = months[count];
+            word = daysOfTheW[saveNumber];
+            System.out.printf("%s  %s %s  %s%n", words, numberOfYear, " is ", word);
+            count++;
+
+            while (count >= 1 && count < 12) {
+                words = months[count];
+                counter = numberOfLeapYear[countN];
+                saveNumber = (saveNumber + counter) % 7;
+                word = daysOfTheW[saveNumber];
+
+                System.out.printf("%s  %s %s  %s%n", words, numberOfYear, " is ", word);
                 countN++;
                 count++;
             }
@@ -85,22 +92,4 @@ public class DisplayMonth {
         }
         return year;
     }
-
-//                        while (i >= 1 && i < 11) {
-//                        if (i == 10) {
-//                            System.out.println("...");
-//                        }
-//                        i++;
-//                    }
-
-
-
-
-
-
-//            num = noFirstDay + 30;
-//            System.out.println(num);
-//            numOne = num % 7;
-//            System.out.println(numOne);
-
-    }
+}
