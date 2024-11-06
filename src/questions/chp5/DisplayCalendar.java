@@ -8,6 +8,7 @@ public class DisplayCalendar {
     public static void main(String[] args) {
         Scanner keyboardInput = new Scanner(in);
         int ordinaryYear = 365;
+        int leapYear = 366;
         int num = 0;
         int number = 0;
         int numCount = 1;
@@ -16,7 +17,9 @@ public class DisplayCalendar {
         int saveNumber = 0;
         int result = 0;
         int countNum = 1;
+        int countNumO = 1;
         int countNumb = 0;
+        int countNumbO = 0;
         String word = "";
         String words = "";
         String wordD = "";
@@ -30,6 +33,7 @@ public class DisplayCalendar {
         String[] daysOfTheW = {"Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"};
         String[] daysOfTheWe = {"Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"};
         int[] numberOfOrdinaryYear = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int [] numberOfLeapYear = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         System.out.println("Enter the year: ");
         int numberOfYear = keyboardInput.nextInt();
 
@@ -55,7 +59,6 @@ public class DisplayCalendar {
             while (result != saveNumber) {
                 result++;
                 System.out.format("     %s","");
-
             }
 
 
@@ -127,62 +130,141 @@ public class DisplayCalendar {
                 }
                 result++;
             }
-            System.out.println();
             count++;
             result = 0;
             System.out.println();
 
 
             while (count >= 1 && count < 11) {
-                System.out.println();
-                word = months[count];
-                System.out.println("           " + word + numberOfYear);
-                System.out.println("————————————————————————————————————");
-                for (int i = 0; i < daysOfTheWe.length; i++) {
-                    System.out.print(daysOfTheWe[i]);
-                    System.out.print("  ");
-                }
-
                 counter = numberOfOrdinaryYear[countN];
                 saveNumber = (saveNumber + counter) % 7;
-                words = daysOfTheW[saveNumber];
-                wordD = daysOfTheWe[result];
                 count++;
+                countN++;
             }
 
+            System.out.println();
 
+            word = months[count];
+            countNumbO = numberOfOrdinaryYear[count];
+            counter = numberOfOrdinaryYear[countN];
+            saveNumber = (saveNumber + counter) % 7;
+            words = daysOfTheW[saveNumber];
 
+            System.out.println("           " + word + numberOfYear);
+            System.out.println("————————————————————————————————————");
+            for (int i = 0; i < daysOfTheWe.length; i++) {
+                System.out.print(daysOfTheWe[i]);
+                System.out.print("  ");
+            }
+            System.out.println();
 
-//            for (int i = 1; i <=countNumb; i++) {
-////                System.out.printf("%1d", i);
-////                System.out.print("     ");
-//                if (i <= 5) {
-//                    System.out.printf("%1d", i);
-//                    System.out.print("     ");
-//                }
-//                if (i == 5) {
-//                    System.out.println();
-//                }
-//
-//                if (i > 5 && i <= 12) {
-//                    if (i > 9 && i <= 12) {
-//                    }
-//                    System.out.printf(" %1d", i);
-//
-//                    for (int numb = 1; numb <=4; numb++) {
+            wordD = daysOfTheWe[result];
+            while (result != saveNumber) {
+                result++;
+                System.out.format("     %s","");
+            }
+
+            while (result == saveNumber) {
+                while (countNumO <= countNumbO) {
+                    if (countNumO <= 7) {
+                        System.out.print(" ");
+                        System.out.print(countNumO);
+                        System.out.print(" ");
+                        System.out.print(" ");
+                        System.out.print(" ");
+                        countNumO++;
+                    }
+                    if (countNumO == 7){
+                        System.out.print(" ");
+                        System.out.print(" ");
+                        System.out.format("%d" ,countNumO);
+                        System.out.println();
+                        countNumO++;
+                    }
+                    if (countNumO >= 8 && countNumO <= 10){
+                        System.out.print(" ");
+                       System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+                        System.out.print(" ");
+                       countNumO++;
+                    }
+                    if (countNumO >= 11 && countNumO <= 14){
 //                        System.out.print(" ");
-//                    }
-//                }
-//
-////                if (i == 19) {
-////                    System.out.println();
-////                    System.out.print(" ");
-////
-////                }
-////                if (i == 26) {
-////                    System.out.println();
-////                    System.out.print(" ");
-////                }
+                       System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+                        System.out.print(" ");
+                       countNumO++;
+                    }
+                    if (countNumO == 14){
+//                        System.out.print(" ");
+                        System.out.format("%d" ,countNumO);
+                        System.out.println();
+                        countNumO++;
+                    }
+                    if (countNumO >= 15 && countNumO <= 17){
+                        System.out.print(" ");
+                        System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+//                        System.out.print(" ");
+                        countNumO++;
+                    }
+                    if (countNumO >= 18 && countNumO <= 21){
+                        System.out.print(" ");
+                        System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+                        countNumO++;
+                    }
+                    if (countNumO == 21){
+                        System.out.format("%d" ,countNumO);
+                        System.out.println();
+                        countNumO++;
+
+                    }
+
+                    if (countNumO >= 22 && countNumO <= 24){
+                        System.out.print(" ");
+                        System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+//                        System.out.print(" ");
+                        countNumO++;
+                    }
+
+                    if (countNumO >= 25 && countNumO <= 28){
+                        System.out.print(" ");
+                        System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+                        countNumO++;
+                    }
+
+                    if (countNumO == 28){
+                        System.out.format("%d" ,countNumO);
+                        System.out.println();
+                        countNumO++;
+                    }
+
+                    if (countNumO >= 29 && countNumO <= 31){
+                        System.out.print(" ");
+                        System.out.format("%d " ,countNumO);
+                        System.out.print(" ");
+                        countNumO++;
+                    }
+
+                }
+                result++;
+            }
+        }
+
+        if (nums == leapYear) {
+            word = months[count];
+            words = daysOfTheW[saveNumber];
+            countNumb = numberOfLeapYear[count];
+            System.out.println("           " + word + numberOfYear);
+            System.out.println("————————————————————————————————————");
+            for (int i = 0; i < daysOfTheWe.length; i++) {
+                System.out.print(daysOfTheWe[i]);
+                System.out.print("  ");
+            }
+            System.out.println();
 
         }
     }
