@@ -31,5 +31,7 @@ public class PyramidPattern {
 
             System.out.println();
         }
+
+
     }
 }
