@@ -6,7 +6,7 @@ import static java.lang.System.in;
 
 public class LotteryGame {
     public static void main(String[] args) {
-        int lottery = (int) (Math.random() * 100);
+        int lottery = (int) (Math.random() * 10);
         System.out.println(lottery);
 
         Scanner keyboardInput = new Scanner(in);
