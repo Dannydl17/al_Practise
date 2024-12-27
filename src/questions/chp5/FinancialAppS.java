@@ -20,12 +20,12 @@ public class FinancialAppS {
         int amountCollected = keyboardInput.nextInt();
 
         System.out.println("Enter annual interest rate:  ");
-        int annualCollected = keyboardInput.nextInt();
+        int annualInterestCollected = keyboardInput.nextInt();
 
         System.out.println("Enter number of months:  ");
         int numberOfMonth = keyboardInput.nextInt();
 
-        result = (double) annualCollected / 100;
+        result = (double) annualInterestCollected / 100;
 
         resultO = result / 12;
 
