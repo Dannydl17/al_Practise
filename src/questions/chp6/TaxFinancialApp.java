@@ -1,5 +1,6 @@
 package questions.chp6;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -9,7 +10,12 @@ public class TaxFinancialApp {
         Scanner keyboardInput = new Scanner(in);
 
         int taxableIncome = 50000;
-        double r = 0.0;
+        int count = 3;
+        int i = 0;
+        double singleResult = 0;
+        double marriedResult = 0;
+        double marriedsResult = 0;
+        double headHResult = 0;
 
         System.out.print("(0-single, 1-married jointly or " +
                 "qualifying widow(er), 2-married separately, 3-head of " +
@@ -17,21 +23,43 @@ public class TaxFinancialApp {
 
         int status = keyboardInput.nextInt();
 
-        if (status == 0) {
-            while (taxableIncome != 60000){
-                while (taxableIncome > 50050 && taxableIncome < 59950){
-                    if (taxableIncome == 59050) {
-                        System.out.println(" ...");
-                    }
-                    taxableIncome+=50;
-                }
-                 r = Math.round(computeTax(status, taxableIncome));
-                 taxableIncome+=50;
-            }
-        }
-        System.out.println(r);
-
         printTable();
+
+        while (taxableIncome <= 60000){
+            while (taxableIncome > 50050 && taxableIncome < 59950){
+                if (taxableIncome == 59050) {
+                    System.out.println(" ...");
+                }
+                taxableIncome+=50;
+            }
+            System.out.printf("%d", taxableIncome);
+            for (i = 0; i <= status; i++) {
+                    if (i == 0) {
+                        singleResult = Math.round(computeTax(i, taxableIncome));
+                        System.out.printf("     %.0f      ", singleResult);
+                    }
+
+                    if (i == 1) {
+                        marriedResult = Math.round(computeTax(i, taxableIncome));
+                        System.out.printf("%4.0f            ",marriedResult);
+                    }
+
+                    if (i == 2) {
+                        marriedsResult = Math.round(computeTax(i, taxableIncome));
+                        System.out.printf("%4.0f         ", marriedsResult);
+                    }
+
+                    if (i == 3) {
+                        headHResult = Math.round(computeTax(i, taxableIncome));
+                        System.out.printf("%4.0f",headHResult);
+                    }
+                while (i == count){
+                       i+=1;
+                }
+            }
+            System.out.println();
+            taxableIncome+=50;
+        }
     }
 
     public static void printTable(){
@@ -39,13 +67,13 @@ public class TaxFinancialApp {
     }
     public static void displayResult(){
         System.out.println("""
-                Taxable           Single           Married Joint           Married           Head of
-                Income                             or Qualifying           Separate          a House
-                                                   Widow(er)
-                -------------------------------------------------------------------------------------------""");
+                Taxable   Single   Married Joint    Married      Head of
+                Income             or Qualifying    Separate     a House
+                                   Widow(er)
+                --------------------------------------------------------------------""");
     }
     public static double computeTax(int status, double taxableIncome){
-        double tax = 0.0;
+        double tax = 0;
 
         if (status == 0) {
             if (taxableIncome <= 8350) {
