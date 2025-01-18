@@ -17,61 +17,7 @@ public class CheckPassword {
         System.out.println("Enter a password:  ");
         String password = keyboardInput.nextLine();
 
-        for (int count = 0; count < password.length(); count++) {
-              pickLetter = password.charAt(count);
-
-            if(pickLetter == 'A' || pickLetter == 'B' ||
-               pickLetter == 'C' || pickLetter == 'D' ||
-               pickLetter == 'E' || pickLetter == 'F' ||
-               pickLetter == 'G' || pickLetter == 'H' ||
-               pickLetter == 'I' || pickLetter == 'J' ||
-               pickLetter == 'K' || pickLetter == 'L' ||
-               pickLetter == 'M' || pickLetter == 'N' ||
-               pickLetter == 'O' || pickLetter == 'P' ||
-               pickLetter == 'Q' || pickLetter == 'R' ||
-               pickLetter == 'S' || pickLetter == 'T' ||
-               pickLetter == 'U' || pickLetter == 'V' ||
-               pickLetter == 'W' || pickLetter == 'X' ||
-               pickLetter == 'Y' || pickLetter == 'Z'){
-                counterU++;
-            }
-
-            if(pickLetter == 'a' || pickLetter == 'b' ||
-               pickLetter == 'c' || pickLetter == 'd' ||
-               pickLetter == 'e' || pickLetter == 'f' ||
-               pickLetter == 'g' || pickLetter == 'h' ||
-               pickLetter == 'i' || pickLetter == 'j' ||
-               pickLetter == 'k' || pickLetter == 'l' ||
-               pickLetter == 'm' || pickLetter == 'n' ||
-               pickLetter == 'o' || pickLetter == 'p' ||
-               pickLetter == 'q' || pickLetter == 'r' ||
-               pickLetter == 's' || pickLetter == 't' ||
-               pickLetter == 'u' || pickLetter == 'v' ||
-               pickLetter == 'w' || pickLetter == 'x' ||
-               pickLetter == 'y' || pickLetter == 'z'){
-                counterL++;
-            }
-
-            if (pickLetter == '0' || pickLetter == '1' ||
-                pickLetter == '2' || pickLetter == '3' ||
-                pickLetter == '4' || pickLetter == '5' ||
-                pickLetter == '6' || pickLetter == '7' ||
-                pickLetter == '8' || pickLetter == '9') {
-                   counterD++;
-            }
-
-        }
-        result = counterU + counterL + counterD;
-
-
-        if (result == 8){
-            resultS = checkPassWord(password);
-        }
-
-        if (result != 8){
-            resultS = checkPassWord(password);
-        }
-
+        resultS = checkPassWord(password);
 
 //        if (result != 8){
 //            System.out.println("Sorry your password must be at least 8 ");
@@ -145,6 +91,9 @@ public class CheckPassword {
         char pickLetter = 0;
         int countDigit = 0;
         String result = "";
+        String wordC = word;
+        String numR = ".*[0-9].*";
+        String alphaR = ".*[A-z].*";
 
         for (int count = 0; count < word.length(); count++) {
             pickLetter = word.charAt(count);
@@ -157,13 +106,18 @@ public class CheckPassword {
                 countDigit++;
             }
         }
-        if (countDigit == 2) {
-            result = "Valid password";
+        if (wordC.length() == 8) {
+            if(wordC.matches(alphaR) && wordC.matches(numR)){
+                if (countDigit == 2) {
+                    result = "Valid password";
+                }
+            }
         }
-        if (countDigit != 2) {
-            result = "Invalid password";
+        if (wordC.length() < 8) {
+            if (countDigit < 2) {
+                result = "Invalid password";
+            }
         }
-
         return result;
     }
 }
