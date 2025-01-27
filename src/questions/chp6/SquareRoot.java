@@ -12,7 +12,7 @@ public class SquareRoot {
         System.out.println("Enter an approximated integer:  ");
         long n = keyboardInput.nextLong();
 
-        System.out.println(Math.sqrt(7));
+        System.out.println(Math.sqrt(35));
         System.out.println(sqrt(n));
    }
    public static double sqrt(long n){
@@ -23,21 +23,15 @@ public class SquareRoot {
             nextGuess = (lastGuess + n / lastGuess) / 2;
 
             if(nextGuess == lastGuess){
-                break;
+                return nextGuess;
             }
+
+//            if(nextGuess - lastGuess == num){
+//                return nextGuess;
+//            }
 
             lastGuess = nextGuess;
         }
-
-
-
-
-//        for (int i = 1; i < 3; i++) {
-//            nextGuess =  (lastGuess + n / next));
-//            ni = nextGuess / 2;
-//            next =  ni;
-//        }
-//        nextGuess = next;
         return nextGuess;
    }
 }
