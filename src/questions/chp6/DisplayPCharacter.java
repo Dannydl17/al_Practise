@@ -7,6 +7,7 @@ public class DisplayPCharacter {
         int numPerLine = 10;
         printChars(ch1, ch2, numPerLine);
     }
+
     public static void printChars(char ch1, char ch2, int numberPerLine){
        int count = 0;
 
@@ -15,9 +16,9 @@ public class DisplayPCharacter {
 //                  counter++;
 //              }
               char ch = (char) counter;
-              System.out.print(ch);
+              System.out.print(ch + " ");
                count++;
-               if (numberPerLine == count) {
+               if (count % numberPerLine == 0) {
                    System.out.println();
                    count = 0;
                }
