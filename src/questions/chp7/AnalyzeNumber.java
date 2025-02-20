@@ -21,5 +21,17 @@ public class AnalyzeNumber {
         }
 
         double average = sum / number;
+
+        int count = 0;
+        for (int counter = 0; counter < number; counter++){
+            if (nums[counter] > average) {
+                count++;
+            }
+        }
+
+
+        System.out.println("Average is " + average);
+        System.out.println("Number of elements above the average is "
+                + count);
     }
 }
