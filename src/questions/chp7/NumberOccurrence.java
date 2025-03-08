@@ -239,7 +239,15 @@ public class NumberOccurrence {
 
 
              for (int count = 0; count < result.length; count++) {
-                 System.out.println(result[count] + " occurs ");
+                 int number = numbs[count];
+
+                 if (number > 1) {
+                     System.out.println(result[count] + " occurs " + number + " times ");
+                 }
+                  else {
+                     System.out.println(result[count] + " occurs " + number + " time ");
+                 }
+
              }
          }
 
