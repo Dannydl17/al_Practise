@@ -263,9 +263,7 @@ public class NumberOccurrence {
 
     public static int[] canCountOccurringNumber(int[] numb, int countN, int[] elements) {
         int[] results = new int[numb.length - countN];
-        int count = 0;
         int countNum = 0;
-        int nums = 1;
         int numIndex = 0;
 
 
