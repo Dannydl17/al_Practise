@@ -1,11 +1,9 @@
 package questions.chp7;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.System.in;
-import static java.lang.System.load;
 
 public class NumberOccurrence {
 
@@ -15,19 +13,27 @@ public class NumberOccurrence {
 
         System.out.print("Enter the integer between 1 and 100:  ");
          int numOne = keyboardInput.nextInt();
+
+
          if (numOne != 0) {
              r.add(numOne);
          }
          else{
              int[] num = convertToArrayOfNumber(r);
-             int[] numbs = canCountOccurringNumber(num);
 
+             int[] numb = canSortArray(num);
+
+             int countN = countElementOfTheSameType(numb);
 
              int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-             int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-             int[] resultTwo = canSortArray(resultOne);
-             for (int count = 0; count < resultTwo.length; count++) {
-                 System.out.println(resultTwo[count] + " occurs ");
+
+             result = canReturnNewElementOfArrayWithOutZero(result);
+
+             int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+             for (int count = 0; count < result.length; count++) {
+                 System.out.println(result[count] + " occurs ");
              }
          }
          numOne = keyboardInput.nextInt();
@@ -36,14 +42,20 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -53,14 +65,20 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -70,14 +88,20 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -87,30 +111,43 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
+
         numOne = keyboardInput.nextInt();
         if (numOne != 0) {
              r.add(numOne);
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -120,14 +157,20 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -137,14 +180,20 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -154,14 +203,20 @@ public class NumberOccurrence {
         }
         else{
             int[] num = convertToArrayOfNumber(r);
-            int[] numbs = canCountOccurringNumber(num);
 
+            int[] numb = canSortArray(num);
+
+            int countN = countElementOfTheSameType(numb);
 
             int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-            int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-            int[] resultTwo = canSortArray(resultOne);
-            for (int count = 0; count < resultTwo.length; count++) {
-                System.out.println(resultTwo[count] + " occurs ");
+
+            result = canReturnNewElementOfArrayWithOutZero(result);
+
+            int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+            for (int count = 0; count < result.length; count++) {
+                System.out.println(result[count] + " occurs ");
             }
         }
 
@@ -171,14 +226,20 @@ public class NumberOccurrence {
         }
         else{
              int[] num = convertToArrayOfNumber(r);
-             int[] numbs = canCountOccurringNumber(num);
 
+             int[] numb = canSortArray(num);
+
+             int countN = countElementOfTheSameType(numb);
 
              int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
-             int[] resultOne = canReturnNewElementOfArrayWithOutZero(result);
-             int[] resultTwo = canSortArray(resultOne);
-             for (int count = 0; count < resultTwo.length; count++) {
-                 System.out.println(resultTwo[count] + " occurs ");
+
+             result = canReturnNewElementOfArrayWithOutZero(result);
+
+             int[] numbs = canCountOccurringNumber(numb, countN, result);
+
+
+             for (int count = 0; count < result.length; count++) {
+                 System.out.println(result[count] + " occurs ");
              }
          }
 
@@ -192,44 +253,28 @@ public class NumberOccurrence {
         return results;
     }
 
-    public static int[] canCountOccurringNumber(int[] num) {
-        int[] numb = canSortArray(num);
-        System.out.println(Arrays.toString(numb));
-        int countN = countElementOfTheSameType(numb);
-        int[] results = new int[num.length - countN];
+    public static int[] canCountOccurringNumber(int[] numb, int countN, int[] elements) {
+        int[] results = new int[numb.length - countN];
         int count = 0;
+        int countNum = 0;
         int nums = 1;
+        int numIndex = 0;
 
-        for (int counter = 0; counter < num.length; counter++) {
-                int n = num[counter];
-                while (nums == counter){
-                    for (int index = 0; index < num.length; index++) {
-//                        if (counter == index){
-//                           continue;
-//                        }
-                        if (n == num[index]) {
-                            count++;
-                        }
-                    }
-                    if (nums == num.length - 1) {
-//                        return count;
-                        break;
-                    }
-                    nums++;
-                    counter++;
-                    n = num[counter];
+
+        for (int countNums = 0; countNums < elements.length; countNums++) {
+               int numbs = elements[countNums];
+            for (int counter = 0; counter < numb.length; counter++) {
+                int number = numb[counter];
+                if (numbs == number) {
+                    countNum += 1;
+                    results[numIndex] = countNum;
                 }
-            for (int index = counter + 1; index < num.length; index++) {
-                if (n == num[index]) {
-                    count++;
-                }
-                results[count] = count;
-                count = 0;
             }
-
+            countNum = 0;
+            numIndex++;
         }
 
-        return num;
+        return results;
     }
 
     public static int[] canSortArray(int[] num) {
@@ -254,7 +299,7 @@ public class NumberOccurrence {
         return result;
     }
 
-    private static int countElementOfTheSameType(int[] num) {
+    public static int countElementOfTheSameType(int[] num) {
         int countN = 0;
         for (int count = 0; count < num.length; count++) {
             for (int counter = count + 1; counter < num.length; counter++) {

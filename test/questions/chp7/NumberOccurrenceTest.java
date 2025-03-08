@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static questions.chp7.NumberOccurrence.*;
 
 public class NumberOccurrenceTest {
 
@@ -11,7 +12,7 @@ public class NumberOccurrenceTest {
     @Test
     public void testThatAnArrayCanBeSortedTest(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] actual = NumberOccurrence.canSortArray(num);
+        int[] actual = canSortArray(num);
         int[] expected = {2, 2, 3, 4, 5, 5, 6, 23, 43};
         assertArrayEquals(expected, actual);
     }
@@ -19,16 +20,16 @@ public class NumberOccurrenceTest {
     @Test
     public void testThatElementsWithTheSameValueCanBeChangeToZero(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] result = NumberOccurrence.canSortArray(num);
-        int[] actual = NumberOccurrence.canCompareAndChangeElementWithTheSameValueToZero(result);
+        int[] result = canSortArray(num);
+        int[] actual = canCompareAndChangeElementWithTheSameValueToZero(result);
         int[] expected = {2, 0, 3, 4, 5, 0, 6, 23, 43};
         assertArrayEquals(expected, actual);
     }
     @Test
     public void testThatANewElementsOfAnArrayCanBeReturnTest(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] result = NumberOccurrence.canSortArray(num);
-        int[] actual = NumberOccurrence.canCompareAndChangeElementWithTheSameValueToZero(result);
+        int[] result = canSortArray(num);
+        int[] actual = canCompareAndChangeElementWithTheSameValueToZero(result);
         int[] expected = {2, 0, 3, 4, 5, 0, 6, 23, 43};
         assertArrayEquals(expected, actual);
 
@@ -41,7 +42,11 @@ public class NumberOccurrenceTest {
     @Test
     public void testThatTheNumberOfTimeANumberIsReadCanBeCountedTest(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] actual = NumberOccurrence.canCountOccurringNumber(num);
+        int[] numb = canSortArray(num);
+        int countN = countElementOfTheSameType(numb);
+        int[] result = canCompareAndChangeElementWithTheSameValueToZero(num);
+        result = canReturnNewElementOfArrayWithOutZero(result);
+        int[] actual = NumberOccurrence.canCountOccurringNumber(numb, countN, result);
         assertEquals(2, actual[0]);
         assertEquals(1, actual[1]);
         assertEquals(1, actual[2]);
