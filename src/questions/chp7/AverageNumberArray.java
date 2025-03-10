@@ -26,7 +26,10 @@ public class AverageNumberArray {
         double[] nums = {firstNum, secondNum, thirdNum, fourthNum, fifthNum,
                          sixthNum, seventhNum, eightNum, ninthNum, tenthNum};
 
-        numbers = canCalculateAnAverageNumber(nums);
+        int[] numbs = {(int) firstNum, (int) secondNum, (int) thirdNum, (int) fourthNum, (int) fifthNum,
+                (int) sixthNum, (int) seventhNum, (int) eightNum, (int) ninthNum, (int) tenthNum};
+
+        numbers = canCalculateAnAverageNumber(numbs);
         number = canCalculateAnAverageNumberDouble(nums);
 
         System.out.println(numbers);
