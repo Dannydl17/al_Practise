@@ -12,7 +12,7 @@ public class NumberOccurrenceTest {
     @Test
     public void testThatAnArrayCanBeSortedTest(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] actual = canSortArray(num);
+        int[] actual = NumberOccurrence.canSortArray(num);
         int[] expected = {2, 2, 3, 4, 5, 5, 6, 23, 43};
         assertArrayEquals(expected, actual);
     }
@@ -20,16 +20,16 @@ public class NumberOccurrenceTest {
     @Test
     public void testThatElementsWithTheSameValueCanBeChangeToZero(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] result = canSortArray(num);
-        int[] actual = canCompareAndChangeElementWithTheSameValueToZero(result);
+        int[] result = NumberOccurrence.canSortArray(num);
+        int[] actual = NumberOccurrence.canCompareAndChangeElementWithTheSameValueToZero(result);
         int[] expected = {2, 0, 3, 4, 5, 0, 6, 23, 43};
         assertArrayEquals(expected, actual);
     }
     @Test
     public void testThatANewElementsOfAnArrayCanBeReturnTest(){
         int[] num = {2, 5, 6, 5, 4, 3, 23, 43, 2};
-        int[] result = canSortArray(num);
-        int[] actual = canCompareAndChangeElementWithTheSameValueToZero(result);
+        int[] result = NumberOccurrence.canSortArray(num);
+        int[] actual = NumberOccurrence.canCompareAndChangeElementWithTheSameValueToZero(result);
         int[] expected = {2, 0, 3, 4, 5, 0, 6, 23, 43};
         assertArrayEquals(expected, actual);
 
