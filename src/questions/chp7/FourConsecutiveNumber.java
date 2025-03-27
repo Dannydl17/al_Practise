@@ -1,21 +1,14 @@
 package questions.chp7;
 
 public class FourConsecutiveNumber {
-
     public static int isConsecutiveFour(int[] values) {
-        int firstNumber = 0;
-        int count = 0;
-        int firstCount = 0;
-        int countValues = 0;
+         int n = values.length;
+          int count = 0;
+        for (int i = 1; i < values.length; i++) {
+            int nu = values[i - 1] + 1;
+            System.out.println(nu);
 
-        while (countValues != values.length){
-               firstNumber = values[firstCount];
 
-            if (firstNumber == values) {
-                 count++;
-            }
-            firstCount +=1;
-            countValues++;
         }
         return 0;
     }
