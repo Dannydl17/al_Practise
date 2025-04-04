@@ -132,7 +132,12 @@ public class TwoSortedList {
     }
 
     public static int[] canMergeAnArray(int[] list1, int[] list2) {
+        int fArray = list1.length;
+        int sArray = list2.length;
+        int toArray = fArray + sArray;
+        int[] newArray = new int[toArray];
 
-        return list1;
+
+        return newArray;
     }
 }
