@@ -1,8 +1,60 @@
 package questions.chp7;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
+
+import static java.lang.System.in;
 
 public class SortedBool {
+
+    public static void main(String[] args) {
+        ArrayList<Integer> colNumber = new ArrayList<>();
+        Scanner keyboardInput = new Scanner(in);
+
+        System.out.print("Enter list: ");
+        int nO = keyboardInput.nextInt();
+        colNumber.add(nO);
+
+        int nT = keyboardInput.nextInt();
+        colNumber.add(nT);
+
+        int nTh = keyboardInput.nextInt();
+        colNumber.add(nTh);
+
+        int nF = keyboardInput.nextInt();
+        colNumber.add(nF);
+
+        int nFi = keyboardInput.nextInt();
+        colNumber.add(nFi);
+
+        int nSi = keyboardInput.nextInt();
+        colNumber.add(nSi);
+
+        int nSe = keyboardInput.nextInt();
+        colNumber.add(nSe);
+
+        int nEi = keyboardInput.nextInt();
+        colNumber.add(nEi);
+
+        int[] numT = convertToArrayOfNumber(colNumber);
+        boolean isSorted = isSorted(numT);
+
+        if (isSorted == true){
+            System.out.println("The list is already sorted");
+        }
+        else {
+            System.out.println("The list is not sorted");
+        }
+    }
+
+    private static int[] convertToArrayOfNumber(ArrayList<Integer> r) {
+        int[] results = new int[r.size()];
+        for (int index = 0; index < results.length; index++) {
+            results[index] = r.get(index);
+        }
+        return results;
+    }
 
     public static int[] canReturnNewElementOfArrayWithOutZero(int[] num) {
         int count = 0;
