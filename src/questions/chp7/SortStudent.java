@@ -41,4 +41,16 @@ public class SortStudent {
         }
         return storeStudentName;
     }
+
+    public static int[] canCollectStudentScore(int[] studentScore) {
+        int[]storeStudentScore = new int[studentScore.length];
+
+        int index = 0;
+
+        for (int count = 0; count < studentScore.length; count++) {
+            storeStudentScore[index] = studentScore[count];
+            index++;
+        }
+        return storeStudentScore;
+    }
 }
