@@ -1,6 +1,6 @@
 package questions.chp7;
 
-public class SelectionsSort {
+public class SelectionSortLargestNumber {
     public static double[] canPerformSelectionSortFromLargestNumber(double[] list) {
 
         for (int count = 0; count < list.length -1; count++) {

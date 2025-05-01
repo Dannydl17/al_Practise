@@ -8,8 +8,8 @@ public class LargestNumberInArrayTest {
 
     @Test
     public void testThatArrayCanReturnTheLargestNumberTest(){
-        int[] nums = {34, 100, 500, 1000, 70000};
+        int[] nums = {30, 67, 80};
         int expected = LargestNumberInArray.canReturnLargestNumberInArray(nums);
-        assertEquals(70000, expected);
+        assertEquals(80, expected);
     }
 }
