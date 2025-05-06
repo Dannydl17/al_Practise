@@ -1,9 +1,15 @@
 package questions.chp8;
 
-import java.util.Arrays;
+import java.util.Scanner;
+
+import static java.lang.System.in;
 
 public class SumElementsColumn {
     public static void main(String[] args) {
+        Scanner keyboardInput = new Scanner(in);
+
+        System.out.println("Enter a 3-by-4 matrix row by row");
+        double number = keyboardInput.nextInt();
 
     }
 
