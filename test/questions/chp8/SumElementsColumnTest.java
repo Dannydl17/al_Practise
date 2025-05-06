@@ -15,8 +15,8 @@ public class SumElementsColumnTest {
                 {5.5, 6, 7, 8},
                 {9.5, 1, 3, 1}
         };
-        int  n = m[0].length;
-        double result = SumElementsColumn.canSumElementAReturnTheResult(m, n);
+        int  n = m[0].length - 1;
+        double result = SumElementsColumn.canSumColumnElementAndReturnTheResult(m, n);
         assertEquals(13.0, result);
     }
 }
