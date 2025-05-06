@@ -25,6 +25,7 @@ public class PlayCodeOne {
         int count = 0;
         for (int j = 0; j < n.length; j++) {
             for (int k = 0; k < n[j].length; k++) {
+
                 if (i == k) {
                     nus[count] = n[j][k];
                     count++;
@@ -32,9 +33,19 @@ public class PlayCodeOne {
                 }
                 if (i != k) {
                     k++;
+                    k--;
                 }
             }
         }
-        return 0;
+        double r = doTheAddition(nus);
+        return r;
+    }
+
+    public static double doTheAddition(double[] nus) {
+        double r = 0.0;
+        for (int i = 0; i < nus.length - 1; i++) {
+             r = nus[i] + nus[i + 1];
+        }
+        return r;
     }
 }
