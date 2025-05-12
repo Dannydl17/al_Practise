@@ -20,6 +20,5 @@ public class EmployeeWeeklyHourCalculationTest {
         assertEquals(20, addNumber[2]);
         assertEquals(31, addNumber[3]);
         assertEquals(4, addNumber.length);
-
     }
 }
