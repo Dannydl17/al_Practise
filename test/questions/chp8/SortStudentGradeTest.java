@@ -95,15 +95,7 @@ public class SortStudentGradeTest {
                 {'C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D'},
                 {'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}};
 
-        int[] result = SortStudentGrade.canReturnTheNumberOfStudent(answer);
-        assertEquals(0, result[0]);
-        assertEquals(1, result[1]);
-        assertEquals(2, result[2]);
-        assertEquals(3, result[3]);
-        assertEquals(4, result[4]);
-        assertEquals(5, result.length);
-
-        int[] changeOfPositionFromGrade = SortStudentGrade.canReturnNewStudentPositionFromGrade(results, result);
+        int[] changeOfPositionFromGrade = SortStudentGrade.canReturnNewStudentPositionFromGrade(results);
         assertEquals(3, changeOfPositionFromGrade[0]);
         assertEquals(2, changeOfPositionFromGrade[1]);
         assertEquals(1, changeOfPositionFromGrade[2]);
