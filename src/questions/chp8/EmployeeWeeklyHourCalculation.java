@@ -17,4 +17,26 @@ public class EmployeeWeeklyHourCalculation {
         }
         return colNumber;
     }
+
+    public static int[] canSortNumberFromDecreasingOrder(int[] addNumber) {
+        int[]colNumber = new int[addNumber.length];
+
+        for (int row = 0; row < addNumber.length;) {
+             int nums = addNumber[row];
+             int column = 0;
+            for (column = row + 1; column < addNumber.length; column++) {
+                if (nums < addNumber[column]) break;
+            }
+            if (column == addNumber.length) {
+                colNumber[row] = nums;
+                row++;
+            }
+            else{
+                int tempo = addNumber[column];
+                addNumber[column] = nums;
+                addNumber[row] = tempo;
+            }
+        }
+        return colNumber;
+    }
 }
