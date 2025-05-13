@@ -71,7 +71,7 @@ public class SortStudentGradeTest {
     }
 
     @Test
-    public void testThatGradeCanChangeTheStudentPositionTest(){
+    public void testThatGradeCanArrangeStudentPositionInIncreasingOrderOfTheirCorrectAnswerTest(){
         char[][] answers = {
                 {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
                 {'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'},
@@ -88,14 +88,7 @@ public class SortStudentGradeTest {
         assertEquals(8, results[4]);
         assertEquals(5, results.length);
 
-        char[][] answer = {
-                {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'D', 'B', 'A', 'B', 'C', 'A', 'E', 'E', 'A', 'D'},
-                {'E', 'D', 'D', 'A', 'C', 'B', 'E', 'E', 'A', 'D'},
-                {'C', 'B', 'A', 'E', 'D', 'C', 'E', 'E', 'A', 'D'},
-                {'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}};
-
-        int[] changeOfPositionFromGrade = SortStudentGrade.canReturnNewStudentPositionFromGrade(results);
+        int[] changeOfPositionFromGrade = SortStudentGrade.canReturnNewStudentPositionFromGradeInIncreasingOrder(results);
         assertEquals(3, changeOfPositionFromGrade[0]);
         assertEquals(2, changeOfPositionFromGrade[1]);
         assertEquals(1, changeOfPositionFromGrade[2]);

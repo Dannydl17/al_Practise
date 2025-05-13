@@ -12,7 +12,7 @@ public class SortStudentGrade {
         char[] keys = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
 
         int[] answerToQuestion = canReturnTheAnswerToQuestion(answers, keys);
-        int[] displayAnswer = canReturnNewStudentPositionFromGrade(answerToQuestion);
+        int[] displayAnswer = canReturnNewStudentPositionFromGradeInIncreasingOrder(answerToQuestion);
         int[] sortStudentAnswer = canSortStudentAnswer(answerToQuestion);
 
         int nums = answerToQuestion.length;
@@ -72,7 +72,7 @@ public class SortStudentGrade {
         return collectNumber;
     }
 
-    public static int[] canReturnNewStudentPositionFromGrade(int[] results) {
+    public static int[] canReturnNewStudentPositionFromGradeInIncreasingOrder(int[] results) {
         int[]newResult = new int[results.length];
 
         int[]newR = new int[results.length];
