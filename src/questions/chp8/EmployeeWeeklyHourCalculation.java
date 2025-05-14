@@ -16,9 +16,16 @@ public class EmployeeWeeklyHourCalculation {
         };
 
         int[] addNums = canAddedWeeklyEmployeeHours(employee);
-        System.out.println(Arrays.toString(addNums));
+//        System.out.println(Arrays.toString(addNums));
         int[] colNum = canReturnNewWeeklyEmployeeHoursFromInDecreasingOrder(addNums);
-        System.out.println(Arrays.toString(colNum));
+//        System.out.println(Arrays.toString(colNum));
+
+        int nums = addNums.length;
+
+        for (int count = 0; count < nums; count++) {
+            System.out.println("Employee " + colNum[count] + "'s correct count is " +
+                    addNums[count]);
+        }
     }
     public static int[] canAddedWeeklyEmployeeHours(int[][] employee) {
         int[]colNumber = new int[employee.length];
