@@ -66,14 +66,15 @@ public class EmployeeWeeklyHourCalculation {
         int[] colNums = canSortNumberFromDecreasingOrder(elements);
 
         int count = 0;
-        int countNum = 0;
-        for (int counter = 0; counter < colNums.length; counter++) {
+        for (int counter = 0; counter < colNums.length;) {
+             int numOne = colNums[counter];
+//            System.out.println(numOne);
             for (int innerCount = 0; innerCount < nums.length; innerCount++) {
-                if (colNums[counter] == nums[innerCount]) {
-                    newResult[count] = innerCount;
-                    count++;
+                int numTwo = nums[innerCount];
+                if (numOne == numTwo) {
+                    newResult[counter] = innerCount;
+                    counter++;
                 }
-
             }
         }
         return newResult;
