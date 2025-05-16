@@ -1,5 +1,6 @@
 package questions.chp8;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -17,6 +18,7 @@ public class FindNearestPoints {
             points[i][0] = keyboardInput.nextDouble();
             points[i][1] = keyboardInput.nextDouble();
         }
+        System.out.println(Arrays.deepToString(points));
         int p1 = 0 , p2 = 1;
         double shortestDistance = distance(points[p1][0], points[p1][1],
            points[p2][0], points[p2][1]);
