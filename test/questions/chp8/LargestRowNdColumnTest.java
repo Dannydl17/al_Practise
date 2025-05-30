@@ -33,4 +33,16 @@ public class LargestRowNdColumnTest {
         assertEquals(3, storeResult[2]);
         assertEquals(3, storeResult.length);
     }
+
+    @Test
+    public void testThatLargestRowNdColumnCanReturnTheIndexWithMostlyOnesTest(){
+        int[][] nums = {
+                {0, 0, 1, 1},
+                {0, 0, 1, 1},
+                {1, 1, 0, 1}
+        };
+
+        int indexNumber = LargestRowNdColumn.canReturnTheHighestNumberOfCountWithMostlyOnes(nums);
+        assertEquals(2, indexNumber);
+    }
 }
