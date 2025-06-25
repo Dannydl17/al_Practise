@@ -30,7 +30,7 @@ public class IdenticalArrayOne {
 
         int[] numbs = {firstLN, secondLN, thirdLN, fourthLN, fifthLN, sixthLN};
 
-        result = canCheckForTheEqualsElement(nums, numbs);
+//        result = canCheckForTheEqualsElement(nums, numbs);
 
         if (result == true) {
             System.out.println("Two lists are identical");

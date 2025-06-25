@@ -1,5 +1,7 @@
 package questions.chp2;
 
+import java.security.SecureRandom;
+
 public class Test {
     public static void main(String[] args) {
         double i = 50.0;
@@ -20,5 +22,14 @@ public class Test {
         System.out.println("j is " + j + " and k is " + k);
         System.out.println("The result is " + numberDivided);
         System.out.println("The result is " + dividedN);
+
+        int y = 5;
+
+        String nu = "y + 2=" + (y + 2);
+        System.out.println(nu);
+
+        SecureRandom randomNumbers = new SecureRandom();
+        int randomValue = randomNumbers.nextInt(2);
+        System.out.println(randomValue);
     }
 }

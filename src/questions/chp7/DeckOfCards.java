@@ -3,8 +3,8 @@ package questions.chp7;
 import java.security.SecureRandom;
 import java.util.Random;
 
-public class DeckOfCards {
-    public static void main(String[] args) {
+//public class DeckOfCards {
+//    public static void main(String[] args) {
 //        int[] deck = new int[52];
 //        String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
 //        String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9",
@@ -31,5 +31,5 @@ public class DeckOfCards {
 //        Character;
 //        String r = random.;
 //        System.out.println(r);
-    }
-}
+//    }
+//}
